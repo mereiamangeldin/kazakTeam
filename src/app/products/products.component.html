@@ -1,0 +1,5 @@
+<div *ngFor="let product of products">
+  <div *ngIf="product.CategoryID==categoryID">
+    {{product.Name}}:{{product.ID}}
+  </div>
+</div>

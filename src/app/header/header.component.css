@@ -1,0 +1,30 @@
+.logo{
+  width: 120px;
+}
+
+.menu{
+  display: flex;
+  width: fit-content;
+  padding: 5px;
+}
+.menu-item{
+  margin: 0 5px;
+  width: 28px;
+  height: 27px;
+}
+.menu-item-activated{
+  font-weight: 600;
+}
+
+.product-type-activated{
+  text-decoration: underline;
+}
+
+.product-types{
+  display: flex;
+  width: fit-content;
+}
+.product-types-item{
+  margin: 0 8px;
+  cursor: default;
+}

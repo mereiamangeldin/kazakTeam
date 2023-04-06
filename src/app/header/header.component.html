@@ -1,0 +1,16 @@
+<img src="https://taplink.st/a/0/b/9/6/5673d7.jpg?1" alt="logo" class="logo" routerLink="/home">
+
+<ul class="menu">
+  <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="user-icon"  class="menu-item" routerLink="/account" [routerLinkActive]="'menu-item-activated'">
+<!--  <li class="menu-item" routerLink="/account" [routerLinkActive]="'menu-item-activated'">Аккаунт</li>-->
+  <img src="https://cdn-icons-png.flaticon.com/512/73/73814.png" alt="user-icon"  class="menu-item" routerLink="/favorites" [routerLinkActive]="'menu-item-activated'">
+<!--  <li class="menu-item" routerLink="/favorites" [routerLinkActive]="'menu-item-activated'">Избранные</li>-->
+  <img src="https://static.vecteezy.com/system/resources/previews/004/999/463/original/shopping-cart-icon-illustration-free-vector.jpg" alt="user-icon"  class="menu-item" routerLink="/purchases" [routerLinkActive]="'menu-item-activated'">
+<!--  <li class="menu-item" routerLink="/purchases" [routerLinkActive]="'menu-item-activated'">Мои товары</li>-->
+</ul>
+
+<ul class="product-types">
+  <div *ngFor="let product_type of categories" class="product-types-item">
+  <li [routerLink]="['/products', product_type.ID]" [routerLinkActive]="'product-type-activated'">{{product_type.Name}}</li>
+  </div>
+</ul>

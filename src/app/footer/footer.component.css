@@ -1,0 +1,25 @@
+.wrapper{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 40%;
+  margin: 14px auto;
+  justify-content: space-evenly;
+  font-family: "Arial Rounded Bold";
+}
+.contacts h1{
+  font-size: 19px;
+}
+.contacts h2{
+  font-size: 20px;
+}
+
+.media{
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+
+
+

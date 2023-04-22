@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'kazakTeam';
-    login: boolean;
 
     constructor() {
-      this.login = true;
     }
 }

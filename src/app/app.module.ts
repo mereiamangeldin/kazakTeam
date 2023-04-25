@@ -9,7 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AccountComponent } from './account/account.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PurchasesComponent } from './purchases/purchases.component';
-import { ProductsComponent } from './products/products.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductsComponent } from './products/products.component';
     AccountComponent,
     FavoritesComponent,
     PurchasesComponent,
-    ProductsComponent
+    CategoriesComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

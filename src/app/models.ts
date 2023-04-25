@@ -8,4 +8,7 @@ export interface Product{
   Name: string;
   Description: string;
   CategoryID: number;
+  Price: number;
+  img: string;
+  liked: boolean;
 }

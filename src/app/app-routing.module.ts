@@ -4,14 +4,16 @@ import {HomeComponent} from "./home/home.component";
 import {AccountComponent} from "./account/account.component";
 import {FavoritesComponent} from "./favorites/favorites.component";
 import {PurchasesComponent} from "./purchases/purchases.component";
-import {ProductsComponent} from "./products/products.component";
+import {CategoriesComponent} from "./categories/categories.component";
+import {ProductDetailComponent} from "./product-detail/product-detail.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'account', component: AccountComponent},
   {path: 'favorites', component: FavoritesComponent},
   {path: 'purchases', component: PurchasesComponent},
-  {path: 'products/:id', component: ProductsComponent},
+  {path: 'categories/:id/products', component: CategoriesComponent},
+  {path: 'categories/:category_id/products/:product_id', component: ProductDetailComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 

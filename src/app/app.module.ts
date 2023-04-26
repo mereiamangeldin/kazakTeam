@@ -13,6 +13,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+import { AuthorizationComponent } from './authorization/authorization.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { SearchComponent } from './search/search.component';
     CategoriesComponent,
     ProductDetailComponent,
     SearchComponent,
+    AuthorizationComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,

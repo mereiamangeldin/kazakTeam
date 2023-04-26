@@ -4,8 +4,8 @@
   </div>
 
   <div class="search">
-    <form action="" class="search-form">
-      <input type="search" placeholder="Введите название товара" class="search-search">
+    <form action="" class="search-form" (ngSubmit)="redirectTo('search')">
+      <input type="search" placeholder="Введите название товара" class="search-search" name="SearchTitle" [(ngModel)]="SearchTitle" autocomplete="off">
       <input type="image" src="https://static.vecteezy.com/system/resources/thumbnails/002/272/237/small/search-icon-simple-free-illustration-free-vector.jpg" alt="Submit Form" class="search-logo" />
     </form>
   </div>

@@ -6,6 +6,7 @@ import {FavoritesComponent} from "./favorites/favorites.component";
 import {PurchasesComponent} from "./purchases/purchases.component";
 import {CategoriesComponent} from "./categories/categories.component";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -14,11 +15,12 @@ const routes: Routes = [
   {path: 'purchases', component: PurchasesComponent},
   {path: 'categories/:id/products', component: CategoriesComponent},
   {path: 'categories/:category_id/products/:product_id', component: ProductDetailComponent},
+  {path: 'search/:title', component: SearchComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation:'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

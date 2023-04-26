@@ -2,8 +2,8 @@
   /*overflow: hidden;*/
   display: flex;
   flex-direction: column;
-  min-height: 753px;
   overflow: hidden;
+  min-height: 60rem;
 }
 
 .content{

@@ -12,6 +12,7 @@ export class CategoriesComponent implements OnInit{
   @Input() categoryID: number;
   products: Product[];
 
+
   constructor(private route: ActivatedRoute) {
     this.categoryID = 1;
     this.products = MyDB.Products;

@@ -16,9 +16,11 @@
 
 .media{
   display: flex;
-  width: 30%;
+  width: 8rem;
   justify-content: space-evenly;
 }
+
+
 
 
 

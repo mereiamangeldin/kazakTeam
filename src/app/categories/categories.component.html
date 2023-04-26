@@ -1,8 +1,8 @@
 <div class="products">
 <div *ngFor="let product of products">
   <div *ngIf="product.CategoryID==categoryID">
-    <img src="https://cdn-icons-png.flaticon.com/512/73/73814.png" class="liked" *ngIf="product.liked" (click)="likeClicked(product)">
-    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="liked" *ngIf="!product.liked" (click)="likeClicked(product)">
+    <img src="https://cdn-icons-png.flaticon.com/512/73/73814.png" class="liked" *ngIf="!product.liked" (click)="likeClicked(product)">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="liked" *ngIf="product.liked" (click)="likeClicked(product)">
     <div class="product">
     <div class="product-image">
     <img src="{{product.img}}" [routerLink]="['/categories', categoryIDtoString(), 'products', product.ID]">

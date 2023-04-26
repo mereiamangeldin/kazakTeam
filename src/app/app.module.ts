@@ -11,6 +11,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     FavoritesComponent,
     PurchasesComponent,
     CategoriesComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

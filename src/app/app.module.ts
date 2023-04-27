@@ -13,7 +13,12 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+import { AuthorizationComponent } from './authorization/authorization.component';
+import { RegistrationComponent } from './registration/registration.component';
+>>>>>>> 1184b3015d95376a433dcbce7ae11f915a65c2a1
 
 @NgModule({
   declarations: [
@@ -27,6 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoriesComponent,
     ProductDetailComponent,
     SearchComponent,
+    AuthorizationComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,

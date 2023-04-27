@@ -7,6 +7,8 @@ import {PurchasesComponent} from "./purchases/purchases.component";
 import {CategoriesComponent} from "./categories/categories.component";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
 import { SearchComponent } from './search/search.component';
+import { AuthorizationComponent } from './authorization/authorization.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'categories/:id/products', component: CategoriesComponent},
   {path: 'categories/:category_id/products/:product_id', component: ProductDetailComponent},
   {path: 'search/:title', component: SearchComponent},
+  {path: 'login', component: AuthorizationComponent},
+  {path: 'registration', component: RegistrationComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 

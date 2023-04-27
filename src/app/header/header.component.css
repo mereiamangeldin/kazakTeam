@@ -21,7 +21,8 @@
 }
 
 .search{
-  flex: 1 1 auto;
+  /*border: 1px solid;*/
+  margin: 0 auto;
 }
 .search-logo{
   width: 25px;
@@ -33,14 +34,14 @@
 
 .logo{
   margin-left: 7%;
-  margin-right: 32rem;
 }
 
 
 .search-search{
+  margin-left: 8rem;
+  margin-right: 1rem;
   width: 500px;
   text-align: center;
-  margin-right: 3%;
   background-color: whitesmoke;
   border-radius: 12px;
 }

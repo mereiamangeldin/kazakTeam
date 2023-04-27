@@ -1,1 +1,11 @@
-<p>authorization works!</p>
+<div class="authorization">
+  <h1 class="authorization-title">авторизация</h1>
+  <form class="authorization-data">
+    <input type="text" placeholder="Email или телефон" class="authorization-login authorization-input">
+    <input type="password" placeholder="Пароль" class="authorization-password authorization-input">
+    <input type="submit" value="войти" class="authorization-enter authorization-button">
+  </form>
+  <a href="" class="authorization-forgot">Забыли пароль?</a>
+  <p class="authorization-register">У вас еще нету аккаунта? <a [routerLink]="['/registration']">Зарегистрироваться</a></p>
+
+</div>

@@ -1,1 +1,13 @@
-<p>registration works!</p>
+<div class="registration">
+  <h1 class="registration-title"> регистрация </h1>
+  <form class="registration-data">
+    <input type="text" placeholder="Имя" class="registration-input">
+    <input type="text" placeholder="Фамилия" class="registration-input">
+    <input type="text" placeholder="Почта или номер телефона" class="registration-input">
+    <input type="password" placeholder="Пароль" class="authorization-password registration-input">
+    <input type="password" placeholder="Повторите пароль" class="authorization-password registration-input">
+    <input type="submit" value="зарегистрироваться" class="registration-enter registration-button">
+  </form>
+  <p class="authorization-register">У вас уже есть аккаунт? <a [routerLink]="['/login']">Войти</a></p>
+
+</div>

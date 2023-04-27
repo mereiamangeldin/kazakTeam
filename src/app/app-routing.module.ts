@@ -9,10 +9,11 @@ import {ProductDetailComponent} from "./product-detail/product-detail.component"
 import { SearchComponent } from './search/search.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { RegistrationComponent } from './registration/registration.component';
+import {AuthoGuardGuard} from "./account/autho-guard.guard";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'account', component: AccountComponent},
+  {path: 'account', component: AccountComponent, canActivate: [AuthoGuardGuard]},
   {path: 'favorites', component: FavoritesComponent},
   {path: 'purchases', component: PurchasesComponent},
   {path: 'categories/:id/products', component: CategoriesComponent},

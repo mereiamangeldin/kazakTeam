@@ -30,7 +30,7 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    return false;
+    return true;
     // Проверить наличие токена в localStorage
     const token = this.getToken();
     return token != null;

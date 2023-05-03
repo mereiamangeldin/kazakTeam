@@ -1,8 +1,8 @@
 <div class="authorization">
   <h1 class="authorization-title">авторизация</h1>
-  <form class="authorization-data">
-    <input type="text" placeholder="Email или телефон" class="authorization-login authorization-input">
-    <input type="password" placeholder="Пароль" class="authorization-password authorization-input">
+  <form class="authorization-data" (ngSubmit)="login()">
+    <input type="text" placeholder="Email или телефон" class="authorization-login authorization-input" name="username" [(ngModel)]="username" autocomplete="off">
+    <input type="password" placeholder="Пароль" class="authorization-password authorization-input"  name="password" [(ngModel)]="password" autocomplete="off">
     <input type="submit" value="войти" class="authorization-enter authorization-button">
   </form>
   <a href="" class="authorization-forgot">Забыли пароль?</a>

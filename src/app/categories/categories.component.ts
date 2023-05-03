@@ -2,6 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Product} from "../models";
 import {ActivatedRoute} from "@angular/router";
 import {MyDB} from "../db";
+import {CategoryService} from "../category.service";
+import {ProductService} from "../product.service";
 
 @Component({
   selector: 'app-categories',
@@ -13,8 +15,8 @@ export class CategoriesComponent implements OnInit{
   products: Product[];
 
 
-  constructor(private route: ActivatedRoute) {
-    this.categoryID = 1;
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService, private productService: ProductService) {
+    this.categoryID = 0;
     this.products = MyDB.Products;
   }
 
@@ -24,11 +26,23 @@ export class CategoriesComponent implements OnInit{
       if (_id) {
         this.categoryID = +_id;
       }
-    })
+    });
+
+  }
+  getCategoryProducts(){
+    this.categoryService.getCategoryProducts(this.categoryID).subscribe((products) => {
+      this.products = products;
+    });
+  }
+
+  updateProduct(product: Product){
+    this.productService.updateProduct(product)
   }
 
   likeClicked(product: Product){
+
       product.liked = !product.liked;
+
   }
   categoryIDtoString(){
     return this.categoryID.toString()

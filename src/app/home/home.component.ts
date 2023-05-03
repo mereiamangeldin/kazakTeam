@@ -11,5 +11,10 @@ import {MyDB} from "../db";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  products: Product[];
+
+  constructor() {
+    this.products = MyDB.Products;
+  }
 
 }

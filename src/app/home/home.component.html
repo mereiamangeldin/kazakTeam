@@ -42,19 +42,19 @@
       <h2 class="plan_type">Рашгарды</h2>
 
       <p class="last">класные</p>
-      <a href="" class="linkerclone2">Перейти</a>
+      <a [routerLink]="['/categories', 2, 'products']" class="linkerclone2">Перейти</a>
     </div>
     <div class="plans_item">
       <h2 class="plan_type">Футболки</h2>
 
       <p class="last">крутые</p>
-      <a href="" class="linkerclone2">Перейти</a>
+      <a [routerLink]="['/categories', 3, 'products']" class="linkerclone2">Перейти</a>
     </div>
     <div class="plans_item">
-      <h2 class="plan_type">Кросовки</h2>
+      <h2 class="plan_type">Кросcовки</h2>
 
       <p class="last">удобные</p>
-      <a href="" class="linkerclone2">Перейти</a>
+      <a [routerLink]="['/categories', 4, 'products']" class="linkerclone2">Перейти</a>
     </div>
   </div>
 </div>
@@ -65,10 +65,11 @@
     <h2 class="capt">Новинка</h2>
   </div>
   <div class="feature">
-    <div class="feature_item">
-      <img src="https://intertop.kz/upload/resize_cache/iblock/67f/521_710_1/b670maqtm9r269x1gxjv1uzgq3d9b9yr.jpg" alt="">
-      <a class="feature_item_link1" href="">Костюм</a>
-      <a class="feature_item_link2" href="">Классный удобный костюм</a>
+    <div  *ngFor="let product of products">
+    <div class="feature_item" *ngIf="product.ID%2==0">
+      <img src="{{product.img}}" alt="" class="feature-img">
+      <a href="">{{product.Name}}</a>
+      <a  href="">{{product.Description}}</a>
       <h3></h3>
       <div class="feature_line"></div>
       <div class="shop_link feature_link_dop">
@@ -78,44 +79,6 @@
         </a>
       </div>
     </div>
-    <div class="feature_item">
-      <img src="https://intertop.kz/upload/resize_cache/iblock/67f/521_710_1/b670maqtm9r269x1gxjv1uzgq3d9b9yr.jpg" alt="">
-      <a class="feature_item_link1" href="">Костюм</a>
-      <a class="feature_item_link2" href="">Классный удобный костюм</a>
-      <h3></h3>
-      <div class="feature_line"></div>
-      <div class="shop_link feature_link_dop">
-        <a href="">
-          Купить
-          <i class="fa-solid fa-angles-right"></i>
-        </a>
-      </div>
-    </div>
-    <div class="feature_item">
-      <img src="https://intertop.kz/upload/resize_cache/iblock/67f/521_710_1/b670maqtm9r269x1gxjv1uzgq3d9b9yr.jpg" alt="">
-      <a class="feature_item_link1" href="">Костюм</a>
-      <a class="feature_item_link2" href="">Классный удобный костюм</a>
-      <h3></h3>
-      <div class="feature_line"></div>
-      <div class="shop_link feature_link_dop">
-        <a href="">
-          Купить
-          <i class="fa-solid fa-angles-right"></i>
-        </a>
-      </div>
-    </div>
-    <div class="feature_item">
-      <img src="https://intertop.kz/upload/resize_cache/iblock/67f/521_710_1/b670maqtm9r269x1gxjv1uzgq3d9b9yr.jpg" alt="">
-      <a class="feature_item_link1" href="">Костюм</a>
-      <a class="feature_item_link2" href="">Классный удобный костюм</a>
-      <h3></h3>
-      <div class="feature_line"></div>
-      <div class="shop_link feature_link_dop">
-        <a href="">
-          Купить
-          <i class="fa-solid fa-angles-right"></i>
-        </a>
-      </div>
     </div>
   </div>
 </div>

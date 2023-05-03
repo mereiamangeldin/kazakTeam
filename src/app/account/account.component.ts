@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  Router, CanActivate } from '@angular/router';
+import {AuthService} from "../auth.service";
 
 @Component({
   selector: 'app-account',
@@ -8,7 +9,7 @@ import {  Router, CanActivate } from '@angular/router';
 })
 export class AccountComponent implements CanActivate {
   Authorized: boolean;
-  constructor(private router: Router){
+  constructor(private router: Router, private authService: AuthService){
     this.Authorized = false;
   }
   canActivate() {
@@ -22,5 +23,8 @@ export class AccountComponent implements CanActivate {
   });
     return false;
 }
-
+  logout(){
+    this.authService.logout()
+    this.router.navigate(['../login'])
+  }
 }

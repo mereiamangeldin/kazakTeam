@@ -25,13 +25,15 @@ export class SearchComponent implements OnInit {
         this.title = _title;
       }
     })
-    this.products = MyDB.Products.filter(product=>product.Name.toLowerCase().includes(this.title.toLowerCase()));
+    this.getProductsByTitle()
+    // this.products = MyDB.Products.filter(product=>product.Name.toLowerCase().includes(this.title.toLowerCase()));
   }
   likeClicked(product: Product){
       product.liked = !product.liked;
+      this.productService.likeAction(product)
   }
   updateProduct(product: Product){
-    this.productService.updateProduct(product)
+    this.productService.likeAction(product)
   }
   categoryIDtoString(id: number){
     return id.toString()

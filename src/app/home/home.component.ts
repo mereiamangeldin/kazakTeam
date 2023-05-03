@@ -14,7 +14,7 @@ export class HomeComponent {
   products: Product[];
 
   constructor() {
-    this.products = MyDB.Products;
+    this.products = [];
   }
 
 }

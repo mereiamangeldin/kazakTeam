@@ -18,7 +18,9 @@
 </div>
 
   <div class="product-types">
-    <div *ngFor="let product_type of categories" class="product-types-item">
-      <div [routerLink]="['/categories', product_type.ID, 'products']" [routerLinkActive]="'product-type-activated'">{{product_type.Name}}</div>
+    <div *ngFor="let category of categories" class="product-types-item">
+      <div [routerLink]="['/categories', category.id, 'products']" [routerLinkActive]="'product-type-activated'">{{category.name}}</div>
     </div>
   </div>
+
+

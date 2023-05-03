@@ -12,23 +12,27 @@ export class FavoritesComponent implements OnInit{
   products: Product[];
 
   constructor(private productService: ProductService){
-    this.products = MyDB.Products.filter(product=>product.liked==true);
+    this.products = [];
   }
 
 
   likeClicked(product: Product){
     product.liked = !product.liked;
+    this.productService.likeAction(product)
 }
 categoryIDtoString(id: number){
   return id.toString()
 }
 
   ngOnInit(): void {
+    this.getFavoriteProducts()
+
   }
 
   getFavoriteProducts(){
     this.productService.getFavoriteProductsOfUser().subscribe((products) => {
       this.products = products;
+      console.log(this.products)
     });
   }
 }

@@ -1,14 +1,14 @@
 export interface Category{
-  ID: number,
-  Name: string
+  id: number,
+  name: string
 }
 
 export interface Product{
-  ID: number;
-  Name: string;
-  Description: string;
-  CategoryID: number;
-  Price: number;
+  id: number;
+  name: string;
+  description: string;
+  category: number;
+  price: number;
   img: string;
   liked: boolean;
 }

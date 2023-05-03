@@ -12,12 +12,7 @@ export class HeaderComponent implements OnInit{
   categories: Category[];
   SearchTitle: string;
   constructor(private router: Router, private categoryService: CategoryService) {
-    this.categories = [
-      {ID: 1, Name: 'Спортивные костюмы'},
-      {ID: 2, Name: 'Рашгарды'},
-      {ID: 3, Name: 'Футболки'},
-      {ID: 4, Name: 'Кроссовки'},
-    ];
+    this.categories = [];
     this.SearchTitle = "";
 
   }
@@ -34,7 +29,7 @@ export class HeaderComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
+    this.getCategories()
   }
 
   getCategories(){

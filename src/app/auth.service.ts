@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 import {User} from "./authorization/authorization.component";
 import {NewUser} from "./registration/registration.component";
 
-const base_url = "url"
+const base_url = "http://127.0.0.1:8000"
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(user: User): Observable<{token: string}>{
-    return this.http.post<{token:string}>(base_url, user)
+    return this.http.post<{token:string}>(`${base_url}/login/`, user)
   }
 
   register(user: NewUser): Observable<{token: string}>{
@@ -30,7 +30,6 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    return false;
     // Проверить наличие токена в localStorage
     const token = this.getToken();
     return token != null;

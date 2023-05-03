@@ -16,8 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {AuthoGuard} from "./autho.guard";
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {TokenInterceptor} from "./token.interceptor";
+import { HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -44,7 +43,6 @@ import {TokenInterceptor} from "./token.interceptor";
   ],
   providers: [
     AuthoGuard,
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

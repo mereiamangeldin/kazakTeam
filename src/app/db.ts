@@ -67,9 +67,9 @@ export class MyDB{
     },
   ];
 
-  static GetProductByID(id: number): Product | undefined{
-    let product = MyDB.Products.find(product => product.ID == id)
-    return product
-  }
+  // static GetProductByID(id: number): Product | undefined{
+  //   let product = MyDB.Products.find(product => product.ID == id)
+  //   return product
+  // }
 
 }

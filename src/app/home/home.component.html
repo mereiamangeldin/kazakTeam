@@ -66,10 +66,10 @@
   </div>
   <div class="feature">
     <div  *ngFor="let product of products">
-    <div class="feature_item" *ngIf="product.ID%2==0">
+    <div class="feature_item" *ngIf="product.id%2==0">
       <img src="{{product.img}}" alt="" class="feature-img">
-      <a href="">{{product.Name}}</a>
-      <a  href="">{{product.Description}}</a>
+      <a href="">{{product.name}}</a>
+      <a  href="">{{product.description}}</a>
       <h3></h3>
       <div class="feature_line"></div>
       <div class="shop_link feature_link_dop">

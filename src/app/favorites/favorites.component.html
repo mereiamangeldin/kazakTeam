@@ -4,10 +4,10 @@
             <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="liked" (click)="likeClicked(product)">
             <div class="product">
             <div class="product-image">
-            <img src="{{product.img}}" [routerLink]="['/categories', categoryIDtoString(product.CategoryID), 'products', product.ID]">
+            <img src="{{product.img}}" [routerLink]="['/categories', categoryIDtoString(product.category), 'products', product.id]">
           </div>
-            <div class="product-name"  [routerLink]="['/categories', categoryIDtoString(product.CategoryID), 'products', product.ID]">{{product.Name}}</div>
-            <div class="product-price">{{product.Price}}тг</div>
+            <div class="product-name"  [routerLink]="['/categories', categoryIDtoString(product.category), 'products', product.id]">{{product.name}}</div>
+            <div class="product-price">{{product.price}}тг</div>
             </div>
         </div>
     </div>
@@ -16,5 +16,4 @@
     <div *ngIf="products.length==0" class="NotFound">
         <img src="https://marketplace.canva.cn/tSgzk/MAFJ2UtSgzk/1/tl/canva-kazakh-icon-MAFJ2UtSgzk.png" class="NotFoundIcon">
         <p class="NotFoundTitle">Избранных товаров еще нету</p>
-    </div> 
-    
+    </div>

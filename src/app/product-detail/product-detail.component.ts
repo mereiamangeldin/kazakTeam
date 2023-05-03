@@ -15,11 +15,11 @@ export class ProductDetailComponent implements OnInit{
   constructor(private route: ActivatedRoute, private productService: ProductService) {
     this.product_id = 0;
     this.product =
-      {ID: 0,
-      Name:'null',
-      Description:'null',
-      CategoryID: 0,
-        Price:0,
+      {id: 0,
+      name:'null',
+      description:'null',
+      category: 0,
+        price:0,
       img: 'null',
       liked: false
     };
@@ -32,10 +32,7 @@ export class ProductDetailComponent implements OnInit{
         this.product_id = +_product_id;
       }
     })
-    let product = MyDB.GetProductByID(this.product_id)
-    if(product){
-      this.product = product;
-    }
+    this.getProductByID()
   }
   getProductByID(){
     this.productService.getProductsByID(this.product_id).subscribe((product) => {

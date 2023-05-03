@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthService} from "../auth.service";
 import {error} from "@angular/compiler-cli/src/transformers/util";
+import {Router} from "@angular/router";
 export interface User{
   username: string,
   password: string
@@ -16,7 +17,7 @@ export class AuthorizationComponent {
   username: string;
   password: string;
   invalidData: boolean;
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     this.password = "";
     this.username = "";
     this.invalidData = false;
@@ -29,6 +30,7 @@ export class AuthorizationComponent {
     }
     this.authService.login(user).subscribe(result => {
       localStorage.setItem('token', result.token);
+      this.router.navigate(['../account']);
     }, error => {
       this.invalidData = true;
     })

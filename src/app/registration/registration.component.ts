@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import {AuthService} from "../auth.service";
 
 export interface NewUser{
-  name: string,
-  surname: string,
+  first_name: string,
+  last_name: string,
   username: string,
   password: string
 }
@@ -14,22 +14,14 @@ export interface NewUser{
 })
 export class RegistrationComponent {
   user: NewUser;
-  pass1: string;
-  pass2: string;
   passError: boolean;
   constructor(private authService: AuthService) {
-    this.user = {name: "", surname:"", username: "", password: ""};
-    this.pass1 = "";
-    this.pass2 = "";
+    this.user = {first_name: "", last_name:"", username: "", password: ""};
     this.passError = false;
   }
 
   register(){
-    if(this.pass1 != this.pass2){
-      this.passError = true;
-      return;
-    }
-    this.user.password = this.pass1;
+    console.log(this.user)
     this.authService.register(this.user);
     }
 }

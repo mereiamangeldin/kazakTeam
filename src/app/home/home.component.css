@@ -1,5 +1,6 @@
 .banner {
-  background-color: #6c757d;
+  background: -webkit-gradient(radial, left top, right top, from(#00305F), to(#856B48));
+  background: linear-gradient(to right, #856B48,#00305F);
   padding: 150px;
   display: flex;
   flex-direction: column;
@@ -20,16 +21,18 @@
   font-size: 24px;
 }
 
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+
+
 }
 
 .item {
   position: relative;
   overflow: hidden;
+  width: 400px;
+
 }
 
 .item img {
@@ -62,12 +65,11 @@
 
 
 .timer{
-  padding: 10%;
+  padding: 5%;
   align-items: center;
   justify-content: center;
-  background-color: white;
   background-attachment: fixed;
-  background-size: cover;
+
 }
 
 .caption{
